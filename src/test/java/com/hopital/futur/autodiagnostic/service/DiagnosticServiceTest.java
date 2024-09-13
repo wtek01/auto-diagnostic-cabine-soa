@@ -1,14 +1,13 @@
 package com.hopital.futur.autodiagnostic.service;
 
 import com.hopital.futur.autodiagnostic.model.DiagnosticResponse;
+import com.hopital.futur.autodiagnostic.exception.InvalidIndexSanteException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 class DiagnosticServiceTest {
-    @Mock
+
     private DiagnosticService diagnosticService;
 
     @BeforeEach
@@ -48,13 +47,21 @@ class DiagnosticServiceTest {
     void testDiagnostiquerZero() {
         DiagnosticResponse response = diagnosticService.diagnostiquer(0);
         assertEquals(0, response.getIndexSante());
-        assertEquals("Cardiologie, Traumatologie", response.getDiagnostic());
+        assertEquals("Aucune pathologie détectée", response.getDiagnostic());
     }
 
     @Test
     void testDiagnostiquerNombreNegatif() {
-        DiagnosticResponse response = diagnosticService.diagnostiquer(-15);
-        assertEquals(-15, response.getIndexSante());
-        assertEquals("Cardiologie, Traumatologie", response.getDiagnostic());
+        assertThrows(InvalidIndexSanteException.class, () -> {
+            diagnosticService.diagnostiquer(-15);
+        });
     }
+
+
+   /* @Test
+    void testDiagnostiquerLargeNombre() {
+        DiagnosticResponse response = diagnosticService.diagnostiquer(1000000);
+        assertEquals(1000000, response.getIndexSante());
+        assertEquals("Aucune pathologie détectée", response.getDiagnostic());
+    }*/
 }

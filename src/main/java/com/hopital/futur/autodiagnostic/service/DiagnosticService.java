@@ -1,6 +1,6 @@
 package com.hopital.futur.autodiagnostic.service;
 
-import com.hopital.futur.autodiagnostic.exception.InvalidHealthIndexException;
+import com.hopital.futur.autodiagnostic.exception.InvalidIndexSanteException;
 import com.hopital.futur.autodiagnostic.model.DiagnosticResponse;
 import org.springframework.stereotype.Service;
 
@@ -8,9 +8,13 @@ import org.springframework.stereotype.Service;
 public class DiagnosticService {
 
     public DiagnosticResponse diagnostiquer(int indexSante) {
-        // Validation: Rejeter les valeurs négatives
         if (indexSante < 0) {
-            throw new InvalidHealthIndexException("L'index de santé ne peut pas être négatif.");
+            throw new InvalidIndexSanteException("L'index de santé ne peut pas être négatif");
+        }
+
+        // Si l'index est 0, ne pas diagnostiquer de pathologies
+        if (indexSante == 0) {
+            return new DiagnosticResponse(0, "Aucune pathologie détectée");
         }
 
         String diagnostic;
