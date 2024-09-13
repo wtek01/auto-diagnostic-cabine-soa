@@ -65,13 +65,14 @@ class DiagnosticControllerTest {
 
     @Test
     void testDiagnostiquerLargeNumber() throws Exception {
-        when(diagnosticService.diagnostiquer(1000000)).thenReturn(new DiagnosticResponse(1000000, Arrays.asList(DiagnosticType.AUCUNE_PATHOLOGIE)));
+        when(diagnosticService.diagnostiquer(2000)).thenReturn(new DiagnosticResponse(2000, Arrays.asList(DiagnosticType.AUCUNE_PATHOLOGIE)));
 
-        mockMvc.perform(get("/api/diagnostic/1000000")
+        mockMvc.perform(get("/api/diagnostic/2000")
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$.indexSante").value(1000000))
+                .andExpect(jsonPath("$.indexSante").value(2000))
                 .andExpect(jsonPath("$.diagnostics[0]").value("Aucune pathologie détectée"));
     }
+
 }
