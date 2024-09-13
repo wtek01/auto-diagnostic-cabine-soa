@@ -29,14 +29,16 @@ class DiagnosticControllerTest {
     @Test
     void testDiagnostiquerValid() throws Exception {
         DiagnosticResponse response = new DiagnosticResponse(33, Arrays.asList(DiagnosticType.CARDIOLOGIE));
+        when(diagnosticService.diagnostiquer(33)).thenReturn(response);
 
         mockMvc.perform(get("/api/diagnostic/33")
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.indexSante").value(33))
-                .andExpect(jsonPath("$.diagnostic").value("Cardiologie"));
+                .andExpect(jsonPath("$.diagnostics[0]").value("Cardiologie"));
     }
+
 
     @Test
     void testDiagnostiquerInvalidNegative() throws Exception {
@@ -58,7 +60,7 @@ class DiagnosticControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.indexSante").value(0))
-                .andExpect(jsonPath("$.diagnostic").value("Aucune pathologie détectée"));
+                .andExpect(jsonPath("$.diagnostics[0]").value("Aucune pathologie détectée"));
     }
 
     @Test
@@ -70,6 +72,6 @@ class DiagnosticControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.indexSante").value(1000000))
-                .andExpect(jsonPath("$.diagnostic").value("Aucune pathologie détectée"));
+                .andExpect(jsonPath("$.diagnostics[0]").value("Aucune pathologie détectée"));
     }
 }

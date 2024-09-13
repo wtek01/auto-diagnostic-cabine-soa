@@ -4,6 +4,7 @@ import com.hopital.futur.autodiagnostic.exception.InvalidIndexSanteException;
 import com.hopital.futur.autodiagnostic.model.DiagnosticResponse;
 import com.hopital.futur.autodiagnostic.service.DiagnosticService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,7 +19,7 @@ public class DiagnosticController {
         this.diagnosticService = diagnosticService;
     }
 
-    @GetMapping("/diagnostic/{indexSante}")
+    @GetMapping(value = "/diagnostic/{indexSante}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<DiagnosticResponse> diagnostiquer(@PathVariable int indexSante) {
         if (indexSante < 0) {
             throw new InvalidIndexSanteException("L'index de santé ne peut pas être négatif");
