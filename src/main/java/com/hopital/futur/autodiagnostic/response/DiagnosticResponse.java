@@ -1,5 +1,6 @@
-package com.hopital.futur.autodiagnostic.model;
+package com.hopital.futur.autodiagnostic.response;
 
+import com.hopital.futur.autodiagnostic.model.DiagnosticType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

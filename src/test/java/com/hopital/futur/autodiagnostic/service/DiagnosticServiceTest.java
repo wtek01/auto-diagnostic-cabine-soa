@@ -1,6 +1,6 @@
 package com.hopital.futur.autodiagnostic.service;
 
-import com.hopital.futur.autodiagnostic.model.DiagnosticResponse;
+import com.hopital.futur.autodiagnostic.response.DiagnosticResponse;
 import com.hopital.futur.autodiagnostic.exception.InvalidIndexSanteException;
 import com.hopital.futur.autodiagnostic.model.DiagnosticType;
 import org.junit.jupiter.api.BeforeEach;

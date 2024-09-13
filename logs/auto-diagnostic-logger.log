@@ -1593,3 +1593,220 @@ com.hopital.futur.autodiagnostic.exception.InvalidIndexSanteException: L'index d
 2024-09-13 14:19:19,983 ERROR c.h.f.a.s.DiagnosticService [main] Index de santé invalide : -15
 2024-09-13 14:19:19,991 INFO c.h.f.a.s.DiagnosticService [main] Début du diagnostic pour l'index de santé : 7
 2024-09-13 14:19:19,993 INFO c.h.f.a.s.DiagnosticService [main] Diagnostic établi : [AUCUNE_PATHOLOGIE] pour l'index de santé : 7
+2024-09-13 15:32:29,341 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-13 15:32:29,342 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2024-09-13 15:32:29,343 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 1 ms
+2024-09-13 15:32:29,349 ERROR c.h.f.a.c.DiagnosticController [http-nio-8080-exec-2] Erreur de type d'argument : Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "yutyutyu"
+2024-09-13 15:32:29,354 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-2] Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "yutyutyu"]
+2024-09-13 15:32:31,203 ERROR c.h.f.a.c.DiagnosticController [http-nio-8080-exec-1] Erreur de type d'argument : Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "yutyutyu"
+2024-09-13 15:32:31,205 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-1] Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "yutyutyu"]
+2024-09-13 15:32:36,532 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-4] RequÃªte reÃ§ue pour diagnostiquer l'index de santÃ© : 11
+2024-09-13 15:32:36,532 INFO c.h.f.a.s.DiagnosticService [http-nio-8080-exec-4] DÃ©but du diagnostic pour l'index de santÃ© : 11
+2024-09-13 15:32:36,534 INFO c.h.f.a.s.DiagnosticService [http-nio-8080-exec-4] Diagnostic Ã©tabli : [AUCUNE_PATHOLOGIE] pour l'index de santÃ© : 11
+2024-09-13 15:32:36,534 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-4] Diagnostic Ã©tabli avec succÃ¨s pour l'index de santÃ© : 11
+2024-09-13 15:32:42,507 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-5] RequÃªte reÃ§ue pour diagnostiquer l'index de santÃ© : -2
+2024-09-13 15:32:42,508 INFO c.h.f.a.s.DiagnosticService [http-nio-8080-exec-5] DÃ©but du diagnostic pour l'index de santÃ© : -2
+2024-09-13 15:32:42,508 ERROR c.h.f.a.s.DiagnosticService [http-nio-8080-exec-5] Index de santÃ© invalide : -2
+2024-09-13 15:32:42,509 ERROR c.h.f.a.c.DiagnosticController [http-nio-8080-exec-5] Index de santÃ© invalide : -2
+com.hopital.futur.autodiagnostic.exception.InvalidIndexSanteException: L'index de santÃ© ne peut pas Ãªtre nÃ©gatif
+	at com.hopital.futur.autodiagnostic.service.DiagnosticService.diagnostiquer(DiagnosticService.java:33)
+	at com.hopital.futur.autodiagnostic.controller.DiagnosticController.diagnostiquer(DiagnosticController.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2024-09-13 15:36:39,588 ERROR c.h.f.a.c.DiagnosticController [http-nio-8080-exec-7] Erreur de type d'argument : Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "jghjghjghj"
+2024-09-13 15:36:39,590 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-7] Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "jghjghjghj"]
+2024-09-13 15:37:40,594 ERROR c.h.f.a.c.DiagnosticController [http-nio-8080-exec-6] Erreur de type d'argument : Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "jghjghjghj"
+2024-09-13 15:37:40,596 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-6] Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "jghjghjghj"]
+2024-09-13 15:37:44,218 ERROR c.h.f.a.c.DiagnosticController [http-nio-8080-exec-8] Erreur de type d'argument : Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "jghjghjghj"
+2024-09-13 15:37:44,220 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-8] Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "jghjghjghj"]
+2024-09-13 15:37:59,042 INFO o.s.b.StartupInfoLogger [restartedMain] Starting AutoDiagnosticCabineApplication using Java 17.0.8 with PID 18996 (C:\dev\Test Technique\auto-diagnostic-cabine\target\classes started by wmelk in C:\dev\Test Technique\auto-diagnostic-cabine)
+2024-09-13 15:37:59,044 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-09-13 15:37:59,046 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-09-13 15:37:59,123 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-13 15:37:59,124 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-13 15:38:01,304 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2024-09-13 15:38:01,317 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-13 15:38:01,321 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-09-13 15:38:01,321 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.13]
+2024-09-13 15:38:01,424 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-09-13 15:38:01,427 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2300 ms
+2024-09-13 15:38:02,705 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-09-13 15:38:02,719 INFO o.s.b.a.e.w.EndpointLinksResolver [restartedMain] Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-09-13 15:38:02,801 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2024-09-13 15:38:02,840 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2024-09-13 15:38:02,868 INFO o.s.b.StartupInfoLogger [restartedMain] Started AutoDiagnosticCabineApplication in 4.643 seconds (process running for 5.402)
+2024-09-13 15:38:35,210 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-13 15:38:35,211 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-09-13 15:38:35,213 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2024-09-13 15:38:35,284 ERROR c.h.f.a.e.GlobalExceptionHandler [http-nio-8080-exec-1] Type d'argument invalide: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "jghjghjghj"
+2024-09-13 15:38:35,369 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-1] Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "jghjghjghj"]
+2024-09-13 15:42:18,709 INFO o.s.b.StartupInfoLogger [restartedMain] Starting AutoDiagnosticCabineApplication using Java 17.0.8 with PID 11660 (C:\dev\Test Technique\auto-diagnostic-cabine\target\classes started by wmelk in C:\dev\Test Technique\auto-diagnostic-cabine)
+2024-09-13 15:42:18,711 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-09-13 15:42:18,713 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-09-13 15:42:18,791 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-13 15:42:18,792 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-13 15:42:21,117 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2024-09-13 15:42:21,130 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-13 15:42:21,134 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-09-13 15:42:21,135 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.13]
+2024-09-13 15:42:21,262 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-09-13 15:42:21,266 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2469 ms
+2024-09-13 15:42:22,503 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-09-13 15:42:22,514 INFO o.s.b.a.e.w.EndpointLinksResolver [restartedMain] Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-09-13 15:42:22,575 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2024-09-13 15:42:22,612 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2024-09-13 15:42:22,637 INFO o.s.b.StartupInfoLogger [restartedMain] Started AutoDiagnosticCabineApplication in 4.736 seconds (process running for 5.496)
+2024-09-13 15:42:36,974 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-13 15:42:36,975 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-09-13 15:42:36,977 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2024-09-13 15:42:37,047 ERROR c.h.f.a.e.GlobalExceptionHandler [http-nio-8080-exec-1] Type d'argument invalide: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "jghjghjghj"
+2024-09-13 15:42:37,146 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-1] Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "jghjghjghj"]
+2024-09-13 15:49:07,675 INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 12 class path changes (0 additions, 12 deletions, 0 modifications)
+2024-09-13 15:49:07,696 INFO o.a.j.l.DirectJDKLog [Thread-5] Pausing ProtocolHandler ["http-nio-8080"]
+2024-09-13 15:49:07,697 INFO o.a.j.l.DirectJDKLog [Thread-5] Stopping service [Tomcat]
+2024-09-13 15:49:07,701 INFO o.a.j.l.DirectJDKLog [Thread-5] Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-09-13 15:49:07,710 INFO o.a.j.l.DirectJDKLog [Thread-5] Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-13 15:49:07,713 INFO o.a.j.l.DirectJDKLog [Thread-5] Destroying ProtocolHandler ["http-nio-8080"]
+2024-09-13 15:49:15,666 INFO o.s.b.StartupInfoLogger [restartedMain] Starting AutoDiagnosticCabineApplication using Java 17.0.8 with PID 11660 (C:\dev\Test Technique\auto-diagnostic-cabine\target\classes started by wmelk in C:\dev\Test Technique\auto-diagnostic-cabine)
+2024-09-13 15:49:15,667 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-09-13 15:49:15,668 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-09-13 15:49:16,471 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2024-09-13 15:49:16,473 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-09-13 15:49:16,474 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.13]
+2024-09-13 15:49:16,511 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-09-13 15:49:16,512 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 835 ms
+2024-09-13 15:49:16,760 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-09-13 15:49:16,764 INFO o.s.b.a.e.w.EndpointLinksResolver [restartedMain] Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-09-13 15:49:16,782 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2024-09-13 15:49:16,789 INFO o.s.b.StartupInfoLogger [restartedMain] Started AutoDiagnosticCabineApplication in 1.193 seconds (process running for 419.647)
+2024-09-13 15:49:16,794 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2024-09-13 15:49:18,611 INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 9 class path changes (9 additions, 0 deletions, 0 modifications)
+2024-09-13 15:49:18,625 INFO o.a.j.l.DirectJDKLog [Thread-11] Stopping service [Tomcat]
+2024-09-13 15:49:18,731 INFO o.s.b.StartupInfoLogger [restartedMain] Starting AutoDiagnosticCabineApplication using Java 17.0.8 with PID 11660 (C:\dev\Test Technique\auto-diagnostic-cabine\target\classes started by wmelk in C:\dev\Test Technique\auto-diagnostic-cabine)
+2024-09-13 15:49:18,732 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-09-13 15:49:18,732 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-09-13 15:49:19,290 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2024-09-13 15:49:19,291 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-09-13 15:49:19,291 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.13]
+2024-09-13 15:49:19,318 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-09-13 15:49:19,319 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 583 ms
+2024-09-13 15:49:19,727 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-09-13 15:49:19,740 INFO o.s.b.a.e.w.EndpointLinksResolver [restartedMain] Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-09-13 15:49:19,777 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2024-09-13 15:49:19,822 INFO o.s.b.StartupInfoLogger [restartedMain] Started AutoDiagnosticCabineApplication in 1.14 seconds (process running for 422.68)
+2024-09-13 15:49:19,829 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2024-09-13 15:49:23,318 INFO o.s.b.StartupInfoLogger [main] Starting DiagnosticControllerTest using Java 17.0.8 with PID 12172 (started by wmelk in C:\dev\Test Technique\auto-diagnostic-cabine)
+2024-09-13 15:49:23,321 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v3.3.3, Spring v6.1.12
+2024-09-13 15:49:23,323 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-09-13 15:49:26,326 INFO o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2024-09-13 15:49:26,328 INFO o.s.w.s.FrameworkServlet [main] Initializing Servlet ''
+2024-09-13 15:49:26,333 INFO o.s.w.s.FrameworkServlet [main] Completed initialization in 2 ms
+2024-09-13 15:49:26,384 INFO o.s.b.StartupInfoLogger [main] Started DiagnosticControllerTest in 3.721 seconds (process running for 5.331)
+2024-09-13 15:49:26,591 INFO c.h.f.a.c.DiagnosticController [main] Requête reçue pour diagnostiquer l'index de santé : -1
+2024-09-13 15:49:26,605 ERROR c.h.f.a.e.GlobalExceptionHandler [main] InvalidIndexSanteException: L'index de santé ne peut pas être négatif
+2024-09-13 15:49:26,864 INFO c.h.f.a.c.DiagnosticController [main] Requête reçue pour diagnostiquer l'index de santé : 33
+2024-09-13 15:49:26,866 INFO c.h.f.a.c.DiagnosticController [main] Diagnostic établi avec succès pour l'index de santé : 33
+2024-09-13 15:49:26,911 INFO c.h.f.a.c.DiagnosticController [main] Requête reçue pour diagnostiquer l'index de santé : 0
+2024-09-13 15:49:26,913 INFO c.h.f.a.c.DiagnosticController [main] Diagnostic établi avec succès pour l'index de santé : 0
+2024-09-13 15:49:26,926 INFO c.h.f.a.c.DiagnosticController [main] Requête reçue pour diagnostiquer l'index de santé : 2000
+2024-09-13 15:49:26,927 INFO c.h.f.a.c.DiagnosticController [main] Diagnostic établi avec succès pour l'index de santé : 2000
+2024-09-13 15:49:26,955 INFO c.h.f.a.s.DiagnosticService [main] Début du diagnostic pour l'index de santé : 15
+2024-09-13 15:49:26,959 INFO c.h.f.a.s.DiagnosticService [main] Diagnostic établi : [CARDIOLOGIE, TRAUMATOLOGIE] pour l'index de santé : 15
+2024-09-13 15:49:26,971 INFO c.h.f.a.s.DiagnosticService [main] Début du diagnostic pour l'index de santé : 9
+2024-09-13 15:49:26,973 INFO c.h.f.a.s.DiagnosticService [main] Diagnostic établi : [CARDIOLOGIE] pour l'index de santé : 9
+2024-09-13 15:49:26,983 INFO c.h.f.a.s.DiagnosticService [main] Début du diagnostic pour l'index de santé : 25
+2024-09-13 15:49:26,984 INFO c.h.f.a.s.DiagnosticService [main] Diagnostic établi : [TRAUMATOLOGIE] pour l'index de santé : 25
+2024-09-13 15:49:26,995 INFO c.h.f.a.s.DiagnosticService [main] Début du diagnostic pour l'index de santé : 0
+2024-09-13 15:49:27,004 INFO c.h.f.a.s.DiagnosticService [main] Début du diagnostic pour l'index de santé : -15
+2024-09-13 15:49:27,005 ERROR c.h.f.a.s.DiagnosticService [main] Index de santé invalide : -15
+2024-09-13 15:49:27,015 INFO c.h.f.a.s.DiagnosticService [main] Début du diagnostic pour l'index de santé : 7
+2024-09-13 15:49:27,016 INFO c.h.f.a.s.DiagnosticService [main] Diagnostic établi : [AUCUNE_PATHOLOGIE] pour l'index de santé : 7
+2024-09-13 15:49:46,356 INFO o.s.b.StartupInfoLogger [restartedMain] Starting AutoDiagnosticCabineApplication using Java 17.0.8 with PID 25304 (C:\dev\Test Technique\auto-diagnostic-cabine\target\classes started by wmelk in C:\dev\Test Technique\auto-diagnostic-cabine)
+2024-09-13 15:49:46,360 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-09-13 15:49:46,361 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-09-13 15:49:46,445 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-13 15:49:46,446 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-13 15:49:48,597 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2024-09-13 15:49:48,609 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-13 15:49:48,613 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-09-13 15:49:48,614 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.13]
+2024-09-13 15:49:48,714 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-09-13 15:49:48,717 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2268 ms
+2024-09-13 15:49:49,853 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-09-13 15:49:49,864 INFO o.s.b.a.e.w.EndpointLinksResolver [restartedMain] Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-09-13 15:49:49,925 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2024-09-13 15:49:49,957 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2024-09-13 15:49:49,980 INFO o.s.b.StartupInfoLogger [restartedMain] Started AutoDiagnosticCabineApplication in 4.444 seconds (process running for 5.233)
+2024-09-13 15:49:52,063 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-13 15:49:52,064 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2024-09-13 15:49:52,066 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 2 ms
+2024-09-13 15:49:52,141 ERROR c.h.f.a.e.GlobalExceptionHandler [http-nio-8080-exec-2] Type d'argument invalide: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "jghjghjghj"
+2024-09-13 15:49:52,231 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-2] Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "jghjghjghj"]
+2024-09-13 15:49:58,832 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-1] RequÃªte reÃ§ue pour diagnostiquer l'index de santÃ© : 33
+2024-09-13 15:49:58,833 INFO c.h.f.a.s.DiagnosticService [http-nio-8080-exec-1] DÃ©but du diagnostic pour l'index de santÃ© : 33
+2024-09-13 15:49:58,836 INFO c.h.f.a.s.DiagnosticService [http-nio-8080-exec-1] Diagnostic Ã©tabli : [CARDIOLOGIE] pour l'index de santÃ© : 33
+2024-09-13 15:49:58,837 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-1] Diagnostic Ã©tabli avec succÃ¨s pour l'index de santÃ© : 33
+2024-09-13 15:50:04,199 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-3] RequÃªte reÃ§ue pour diagnostiquer l'index de santÃ© : 15
+2024-09-13 15:50:04,199 INFO c.h.f.a.s.DiagnosticService [http-nio-8080-exec-3] DÃ©but du diagnostic pour l'index de santÃ© : 15
+2024-09-13 15:50:04,200 INFO c.h.f.a.s.DiagnosticService [http-nio-8080-exec-3] Diagnostic Ã©tabli : [CARDIOLOGIE, TRAUMATOLOGIE] pour l'index de santÃ© : 15
+2024-09-13 15:50:04,200 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-3] Diagnostic Ã©tabli avec succÃ¨s pour l'index de santÃ© : 15
+2024-09-13 15:50:09,189 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-4] RequÃªte reÃ§ue pour diagnostiquer l'index de santÃ© : 0
+2024-09-13 15:50:09,190 INFO c.h.f.a.s.DiagnosticService [http-nio-8080-exec-4] DÃ©but du diagnostic pour l'index de santÃ© : 0
+2024-09-13 15:50:09,191 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-4] Diagnostic Ã©tabli avec succÃ¨s pour l'index de santÃ© : 0
+2024-09-13 15:50:14,562 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-5] RequÃªte reÃ§ue pour diagnostiquer l'index de santÃ© : -3
+2024-09-13 15:50:14,562 INFO c.h.f.a.s.DiagnosticService [http-nio-8080-exec-5] DÃ©but du diagnostic pour l'index de santÃ© : -3
+2024-09-13 15:50:14,562 ERROR c.h.f.a.s.DiagnosticService [http-nio-8080-exec-5] Index de santÃ© invalide : -3
+2024-09-13 15:50:14,563 ERROR c.h.f.a.e.GlobalExceptionHandler [http-nio-8080-exec-5] InvalidIndexSanteException: L'index de santÃ© ne peut pas Ãªtre nÃ©gatif
+2024-09-13 15:50:14,564 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-5] Resolved [com.hopital.futur.autodiagnostic.exception.InvalidIndexSanteException: L'index de santÃ© ne peut pas Ãªtre nÃ©gatif]

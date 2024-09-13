@@ -1,10 +1,9 @@
 package com.hopital.futur.autodiagnostic.service;
 
 import com.hopital.futur.autodiagnostic.exception.InvalidIndexSanteException;
-import com.hopital.futur.autodiagnostic.model.DiagnosticResponse;
+import com.hopital.futur.autodiagnostic.response.DiagnosticResponse;
 import com.hopital.futur.autodiagnostic.model.DiagnosticType;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -12,9 +11,8 @@ import java.util.Collections;
 import java.util.List;
 
 @Service
+@Slf4j
 public class DiagnosticService {
-
-    private static final Logger logger = LoggerFactory.getLogger(DiagnosticService.class);
     private static final int SEUIL_AVERTISSEMENT = 1000; // Exemple de seuil pour les valeurs inhabituelles
 
     // Constantes pour les seuils de diagnostic
@@ -27,9 +25,9 @@ public class DiagnosticService {
      * Des valeurs plus élevées sont traitées mais pourraient indiquer un problème avec le capteur.
      */
     public DiagnosticResponse diagnostiquer(int indexSante) {
-        logger.info("Début du diagnostic pour l'index de santé : {}", indexSante);
+        log.info("Début du diagnostic pour l'index de santé : {}", indexSante);
         if (indexSante < 0) {
-            logger.error("Index de santé invalide : {}", indexSante);
+            log.error("Index de santé invalide : {}", indexSante);
             throw new InvalidIndexSanteException("L'index de santé ne peut pas être négatif");
         }
 
@@ -39,7 +37,7 @@ public class DiagnosticService {
         }
 
         if (indexSante > SEUIL_AVERTISSEMENT) {
-            logger.warn("Index de santé inhabituellement élevé détecté : {}", indexSante);
+            log.warn("Index de santé inhabituellement élevé détecté : {}", indexSante);
         }
 
         List<DiagnosticType> diagnostics = new ArrayList<>();
@@ -54,7 +52,7 @@ public class DiagnosticService {
             diagnostics.add(DiagnosticType.AUCUNE_PATHOLOGIE);
         }
 
-        logger.info("Diagnostic établi : {} pour l'index de santé : {}", diagnostics, indexSante);
+        log.info("Diagnostic établi : {} pour l'index de santé : {}", diagnostics, indexSante);
         return new DiagnosticResponse(indexSante, diagnostics);
     }
 }

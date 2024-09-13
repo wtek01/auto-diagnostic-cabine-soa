@@ -1,6 +1,6 @@
 package com.hopital.futur.autodiagnostic.controller;
 
-import com.hopital.futur.autodiagnostic.model.DiagnosticResponse;
+import com.hopital.futur.autodiagnostic.response.DiagnosticResponse;
 import com.hopital.futur.autodiagnostic.model.DiagnosticType;
 import com.hopital.futur.autodiagnostic.service.DiagnosticService;
 import com.hopital.futur.autodiagnostic.exception.InvalidIndexSanteException;
