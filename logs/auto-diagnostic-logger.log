@@ -1810,3 +1810,36 @@ com.hopital.futur.autodiagnostic.exception.InvalidIndexSanteException: L'index d
 2024-09-13 15:50:14,562 ERROR c.h.f.a.s.DiagnosticService [http-nio-8080-exec-5] Index de santé invalide : -3
 2024-09-13 15:50:14,563 ERROR c.h.f.a.e.GlobalExceptionHandler [http-nio-8080-exec-5] InvalidIndexSanteException: L'index de santé ne peut pas être négatif
 2024-09-13 15:50:14,564 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-5] Resolved [com.hopital.futur.autodiagnostic.exception.InvalidIndexSanteException: L'index de santé ne peut pas être négatif]
+2024-09-13 16:42:12,857 INFO o.s.b.StartupInfoLogger [restartedMain] Starting AutoDiagnosticCabineApplication using Java 17.0.8 with PID 24332 (C:\dev\Test Technique\auto-diagnostic-cabine\target\classes started by wmelk in C:\dev\Test Technique\auto-diagnostic-cabine)
+2024-09-13 16:42:12,861 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-09-13 16:42:12,862 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-09-13 16:42:12,949 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-13 16:42:12,950 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-13 16:42:15,123 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2024-09-13 16:42:15,136 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-13 16:42:15,140 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-09-13 16:42:15,140 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.13]
+2024-09-13 16:42:15,245 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-09-13 16:42:15,247 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2293 ms
+2024-09-13 16:42:16,350 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-09-13 16:42:16,360 INFO o.s.b.a.e.w.EndpointLinksResolver [restartedMain] Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-09-13 16:42:16,427 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2024-09-13 16:42:16,461 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2024-09-13 16:42:16,491 INFO o.s.b.StartupInfoLogger [restartedMain] Started AutoDiagnosticCabineApplication in 4.448 seconds (process running for 5.28)
+2024-09-13 16:42:43,759 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-13 16:42:43,760 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-09-13 16:42:43,762 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2024-09-13 16:42:44,934 INFO o.s.a.AbstractOpenApiResource [http-nio-8080-exec-9] Init duration for springdoc-openapi is: 650 ms
+2024-09-13 16:42:51,874 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-10] Requête reçue pour diagnostiquer l'index de santé : 11
+2024-09-13 16:42:51,875 INFO c.h.f.a.s.DiagnosticService [http-nio-8080-exec-10] Début du diagnostic pour l'index de santé : 11
+2024-09-13 16:42:51,875 INFO c.h.f.a.s.DiagnosticService [http-nio-8080-exec-10] Diagnostic établi : [AUCUNE_PATHOLOGIE] pour l'index de santé : 11
+2024-09-13 16:42:51,876 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-10] Diagnostic établi avec succès pour l'index de santé : 11
+2024-09-13 16:42:53,585 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-1] Requête reçue pour diagnostiquer l'index de santé : 11
+2024-09-13 16:42:53,585 INFO c.h.f.a.s.DiagnosticService [http-nio-8080-exec-1] Début du diagnostic pour l'index de santé : 11
+2024-09-13 16:42:53,585 INFO c.h.f.a.s.DiagnosticService [http-nio-8080-exec-1] Diagnostic établi : [AUCUNE_PATHOLOGIE] pour l'index de santé : 11
+2024-09-13 16:42:53,585 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-1] Diagnostic établi avec succès pour l'index de santé : 11
+2024-09-13 16:42:58,792 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-6] Requête reçue pour diagnostiquer l'index de santé : -11
+2024-09-13 16:42:58,792 INFO c.h.f.a.s.DiagnosticService [http-nio-8080-exec-6] Début du diagnostic pour l'index de santé : -11
+2024-09-13 16:42:58,793 ERROR c.h.f.a.s.DiagnosticService [http-nio-8080-exec-6] Index de santé invalide : -11
+2024-09-13 16:42:58,795 ERROR c.h.f.a.e.GlobalExceptionHandler [http-nio-8080-exec-6] InvalidIndexSanteException: L'index de santé ne peut pas être négatif
+2024-09-13 16:42:58,800 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-6] Resolved [com.hopital.futur.autodiagnostic.exception.InvalidIndexSanteException: L'index de santé ne peut pas être négatif]
