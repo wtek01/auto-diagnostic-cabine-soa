@@ -1,10 +1,14 @@
 package com.hopital.futur.autodiagnostic.controller;
 
-import com.hopital.futur.autodiagnostic.exception.InvalidIndexSanteException;
 import com.hopital.futur.autodiagnostic.model.DiagnosticResponse;
 import com.hopital.futur.autodiagnostic.service.DiagnosticService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,13 +23,18 @@ public class DiagnosticController {
         this.diagnosticService = diagnosticService;
     }
 
-    @GetMapping(value = "/diagnostic/{indexSante}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<DiagnosticResponse> diagnostiquer(@PathVariable int indexSante) {
-        if (indexSante < 0) {
-            throw new InvalidIndexSanteException("L'index de santé ne peut pas être négatif");
-        }
+    @Operation(summary = "Obtenir un diagnostic basé sur l'index de santé")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Diagnostic réussi",
+                    content = { @Content(mediaType = "application/json",
+                            schema = @Schema(implementation = DiagnosticResponse.class)) }),
+            @ApiResponse(responseCode = "400", description = "Index de santé invalide",
+                    content = @Content)
+    })
+    @GetMapping("/diagnostic/{indexSante}")
+    public ResponseEntity<DiagnosticResponse> diagnostiquer(
+            @Parameter(description = "Index de santé du patient") @PathVariable int indexSante) {
         DiagnosticResponse response = diagnosticService.diagnostiquer(indexSante);
         return ResponseEntity.ok(response);
     }
-
 }
