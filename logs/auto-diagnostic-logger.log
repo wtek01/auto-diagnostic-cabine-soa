@@ -1,0 +1,277 @@
+2024-09-13 13:00:34,805 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.classic.pattern.ClassOfCallerConverter@501c1d34 - failed to parse integer string [1.] java.lang.NumberFormatException: For input string: "1."
+ERROR in ch.qos.logback.classic.pattern.ClassOfCallerConverter@6a481c09 - failed to parse integer string [1.] java.lang.NumberFormatException: For input string: "1."
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:347)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:298)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:246)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:223)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:174)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:167)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:145)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:133)
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:359)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
+	at com.hopital.futur.autodiagnostic.AutoDiagnosticCabineApplication.main(AutoDiagnosticCabineApplication.java:9)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.classic.pattern.ClassOfCallerConverter@501c1d34 - failed to parse integer string [1.] java.lang.NumberFormatException: For input string: "1."
+ERROR in ch.qos.logback.classic.pattern.ClassOfCallerConverter@6a481c09 - failed to parse integer string [1.] java.lang.NumberFormatException: For input string: "1."
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reportConfigurationErrorsIfNecessary(LogbackLoggingSystem.java:270)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:248)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:80)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:188)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:332)
+	... 24 common frames omitted
+	Suppressed: java.lang.NumberFormatException: For input string: "1."
+		at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+		at java.base/java.lang.Integer.parseInt(Integer.java:668)
+		at java.base/java.lang.Integer.parseInt(Integer.java:786)
+		at ch.qos.logback.classic.pattern.NamedConverter.start(NamedConverter.java:92)
+		at ch.qos.logback.core.pattern.ConverterUtil.startConverters(ConverterUtil.java:37)
+		at ch.qos.logback.core.pattern.ConverterUtil.startConverters(ConverterUtil.java:33)
+		at ch.qos.logback.core.pattern.PatternLayoutBase.start(PatternLayoutBase.java:90)
+		at ch.qos.logback.core.model.processor.ImplicitModelHandler.postHandleComplex(ImplicitModelHandler.java:208)
+		at ch.qos.logback.core.model.processor.ImplicitModelHandler.postHandle(ImplicitModelHandler.java:186)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:257)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:253)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:253)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.traversalLoop(DefaultProcessor.java:90)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.process(DefaultProcessor.java:106)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.processModel(GenericXMLConfigurator.java:208)
+		at org.springframework.boot.logging.logback.SpringBootJoranConfigurator.processModel(SpringBootJoranConfigurator.java:122)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:170)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:122)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:65)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.configureByResourceUrl(LogbackLoggingSystem.java:280)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:243)
+		... 28 common frames omitted
+	Suppressed: java.lang.NumberFormatException: For input string: "1."
+		at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+		at java.base/java.lang.Integer.parseInt(Integer.java:668)
+		at java.base/java.lang.Integer.parseInt(Integer.java:786)
+		at ch.qos.logback.classic.pattern.NamedConverter.start(NamedConverter.java:92)
+		at ch.qos.logback.core.pattern.ConverterUtil.startConverters(ConverterUtil.java:37)
+		at ch.qos.logback.core.pattern.PatternLayoutBase.start(PatternLayoutBase.java:90)
+		at ch.qos.logback.classic.encoder.PatternLayoutEncoder.start(PatternLayoutEncoder.java:28)
+		at ch.qos.logback.core.model.processor.ImplicitModelHandler.postHandleComplex(ImplicitModelHandler.java:208)
+		at ch.qos.logback.core.model.processor.ImplicitModelHandler.postHandle(ImplicitModelHandler.java:186)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:257)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:253)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:253)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.traversalLoop(DefaultProcessor.java:90)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.process(DefaultProcessor.java:106)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.processModel(GenericXMLConfigurator.java:208)
+		at org.springframework.boot.logging.logback.SpringBootJoranConfigurator.processModel(SpringBootJoranConfigurator.java:122)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:170)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:122)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:65)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.configureByResourceUrl(LogbackLoggingSystem.java:280)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:243)
+		... 28 common frames omitted
+2024-09-13 13:07:32,756 INFO o.s.b.StartupInfoLogger [restartedMain] Starting AutoDiagnosticCabineApplication using Java 17.0.8 with PID 22788 (C:\dev\Test Technique\auto-diagnostic-cabine\target\classes started by wmelk in C:\dev\Test Technique\auto-diagnostic-cabine)
+2024-09-13 13:07:32,759 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-09-13 13:07:32,761 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-09-13 13:07:32,847 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-13 13:07:32,848 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-13 13:07:35,102 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2024-09-13 13:07:35,113 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-13 13:07:35,117 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-09-13 13:07:35,117 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.13]
+2024-09-13 13:07:35,214 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-09-13 13:07:35,217 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2364 ms
+2024-09-13 13:07:36,607 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-09-13 13:07:36,619 INFO o.s.b.a.e.w.EndpointLinksResolver [restartedMain] Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-09-13 13:07:36,689 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2024-09-13 13:07:36,721 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2024-09-13 13:07:36,752 INFO o.s.b.StartupInfoLogger [restartedMain] Started AutoDiagnosticCabineApplication in 5.05 seconds (process running for 5.881)
+2024-09-13 13:07:53,825 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-13 13:07:53,826 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-09-13 13:07:53,828 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2024-09-13 13:07:53,894 INFO c.h.f.a.s.DiagnosticService [http-nio-8080-exec-1] Début du diagnostic pour l'index de santé : 33
+2024-09-13 13:07:53,899 INFO c.h.f.a.s.DiagnosticService [http-nio-8080-exec-1] Diagnostic établi : [CARDIOLOGIE] pour l'index de santé : 33
+2024-09-13 13:08:09,208 INFO c.h.f.a.s.DiagnosticService [http-nio-8080-exec-2] Début du diagnostic pour l'index de santé : 99
+2024-09-13 13:08:09,209 INFO c.h.f.a.s.DiagnosticService [http-nio-8080-exec-2] Diagnostic établi : [CARDIOLOGIE] pour l'index de santé : 99
+2024-09-13 13:08:23,800 INFO c.h.f.a.s.DiagnosticService [http-nio-8080-exec-3] Début du diagnostic pour l'index de santé : -99
+2024-09-13 13:08:23,800 ERROR c.h.f.a.s.DiagnosticService [http-nio-8080-exec-3] Index de santé invalide : -99
+2024-09-13 13:08:23,813 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-3] Resolved [com.hopital.futur.autodiagnostic.exception.InvalidIndexSanteException: L'index de santé ne peut pas être négatif]
+2024-09-13 13:12:18,277 INFO o.s.b.StartupInfoLogger [restartedMain] Starting AutoDiagnosticCabineApplication using Java 17.0.8 with PID 24384 (C:\dev\Test Technique\auto-diagnostic-cabine\target\classes started by wmelk in C:\dev\Test Technique\auto-diagnostic-cabine)
+2024-09-13 13:12:18,280 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-09-13 13:12:18,282 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-09-13 13:12:18,369 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-13 13:12:18,369 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-13 13:12:20,665 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2024-09-13 13:12:20,677 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-13 13:12:20,680 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-09-13 13:12:20,682 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.13]
+2024-09-13 13:12:20,783 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-09-13 13:12:20,786 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2414 ms
+2024-09-13 13:12:21,914 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-09-13 13:12:21,923 INFO o.s.b.a.e.w.EndpointLinksResolver [restartedMain] Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-09-13 13:12:21,993 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2024-09-13 13:12:22,025 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2024-09-13 13:12:22,049 INFO o.s.b.StartupInfoLogger [restartedMain] Started AutoDiagnosticCabineApplication in 4.624 seconds (process running for 5.453)
+2024-09-13 13:13:14,785 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-13 13:13:14,785 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-09-13 13:13:14,788 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 2 ms
+2024-09-13 13:13:14,872 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-1] Requête reçue pour diagnostiquer l'index de santé : -99
+2024-09-13 13:13:14,875 INFO c.h.f.a.s.DiagnosticService [http-nio-8080-exec-1] Début du diagnostic pour l'index de santé : -99
+2024-09-13 13:13:14,876 ERROR c.h.f.a.s.DiagnosticService [http-nio-8080-exec-1] Index de santé invalide : -99
+2024-09-13 13:13:14,877 ERROR c.h.f.a.c.DiagnosticController [http-nio-8080-exec-1] Erreur lors du diagnostic pour l'index de santé : -99
+com.hopital.futur.autodiagnostic.exception.InvalidIndexSanteException: L'index de santé ne peut pas être négatif
+	at com.hopital.futur.autodiagnostic.service.DiagnosticService.diagnostiquer(DiagnosticService.java:23)
+	at com.hopital.futur.autodiagnostic.controller.DiagnosticController.diagnostiquer(DiagnosticController.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2024-09-13 13:14:08,196 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-2] Requête reçue pour diagnostiquer l'index de santé : 99
+2024-09-13 13:14:08,196 INFO c.h.f.a.s.DiagnosticService [http-nio-8080-exec-2] Début du diagnostic pour l'index de santé : 99
+2024-09-13 13:14:08,197 INFO c.h.f.a.s.DiagnosticService [http-nio-8080-exec-2] Diagnostic établi : [CARDIOLOGIE] pour l'index de santé : 99
+2024-09-13 13:14:08,198 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-2] Diagnostic établi avec succès pour l'index de santé : 99
+2024-09-13 13:14:09,495 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-3] Requête reçue pour diagnostiquer l'index de santé : 99
+2024-09-13 13:14:09,496 INFO c.h.f.a.s.DiagnosticService [http-nio-8080-exec-3] Début du diagnostic pour l'index de santé : 99
+2024-09-13 13:14:09,496 INFO c.h.f.a.s.DiagnosticService [http-nio-8080-exec-3] Diagnostic établi : [CARDIOLOGIE] pour l'index de santé : 99
+2024-09-13 13:14:09,497 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-3] Diagnostic établi avec succès pour l'index de santé : 99
+2024-09-13 13:14:13,085 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-4] Requête reçue pour diagnostiquer l'index de santé : 99
+2024-09-13 13:14:13,085 INFO c.h.f.a.s.DiagnosticService [http-nio-8080-exec-4] Début du diagnostic pour l'index de santé : 99
+2024-09-13 13:14:13,086 INFO c.h.f.a.s.DiagnosticService [http-nio-8080-exec-4] Diagnostic établi : [CARDIOLOGIE] pour l'index de santé : 99
+2024-09-13 13:14:13,086 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-4] Diagnostic établi avec succès pour l'index de santé : 99
+2024-09-13 13:14:13,721 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-5] Requête reçue pour diagnostiquer l'index de santé : 99
+2024-09-13 13:14:13,722 INFO c.h.f.a.s.DiagnosticService [http-nio-8080-exec-5] Début du diagnostic pour l'index de santé : 99
+2024-09-13 13:14:13,722 INFO c.h.f.a.s.DiagnosticService [http-nio-8080-exec-5] Diagnostic établi : [CARDIOLOGIE] pour l'index de santé : 99
+2024-09-13 13:14:13,723 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-5] Diagnostic établi avec succès pour l'index de santé : 99
+2024-09-13 13:14:19,332 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-6] Requête reçue pour diagnostiquer l'index de santé : 0
+2024-09-13 13:14:19,333 INFO c.h.f.a.s.DiagnosticService [http-nio-8080-exec-6] Début du diagnostic pour l'index de santé : 0
+2024-09-13 13:14:19,333 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-6] Diagnostic établi avec succès pour l'index de santé : 0
+2024-09-13 13:14:25,578 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-8] Requête reçue pour diagnostiquer l'index de santé : 0
+2024-09-13 13:14:25,579 INFO c.h.f.a.s.DiagnosticService [http-nio-8080-exec-8] Début du diagnostic pour l'index de santé : 0
+2024-09-13 13:14:25,579 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-8] Diagnostic établi avec succès pour l'index de santé : 0
+2024-09-13 13:14:40,873 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-7] Requête reçue pour diagnostiquer l'index de santé : 0
+2024-09-13 13:14:40,874 INFO c.h.f.a.s.DiagnosticService [http-nio-8080-exec-7] Début du diagnostic pour l'index de santé : 0
+2024-09-13 13:14:40,875 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-7] Diagnostic établi avec succès pour l'index de santé : 0
+2024-09-13 13:14:58,076 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-9] Requête reçue pour diagnostiquer l'index de santé : -1
+2024-09-13 13:14:58,077 INFO c.h.f.a.s.DiagnosticService [http-nio-8080-exec-9] Début du diagnostic pour l'index de santé : -1
+2024-09-13 13:14:58,077 ERROR c.h.f.a.s.DiagnosticService [http-nio-8080-exec-9] Index de santé invalide : -1
+2024-09-13 13:14:58,077 ERROR c.h.f.a.c.DiagnosticController [http-nio-8080-exec-9] Erreur lors du diagnostic pour l'index de santé : -1
+com.hopital.futur.autodiagnostic.exception.InvalidIndexSanteException: L'index de santé ne peut pas être négatif
+	at com.hopital.futur.autodiagnostic.service.DiagnosticService.diagnostiquer(DiagnosticService.java:23)
+	at com.hopital.futur.autodiagnostic.controller.DiagnosticController.diagnostiquer(DiagnosticController.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
