@@ -2,6 +2,7 @@ package com.hopital.futur.autodiagnostic.service;
 
 import com.hopital.futur.autodiagnostic.model.DiagnosticResponse;
 import com.hopital.futur.autodiagnostic.exception.InvalidIndexSanteException;
+import com.hopital.futur.autodiagnostic.model.DiagnosticType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -19,35 +20,36 @@ class DiagnosticServiceTest {
     void testDiagnostiquerMultipleDe3Et5() {
         DiagnosticResponse response = diagnosticService.diagnostiquer(15);
         assertEquals(15, response.getIndexSante());
-        assertEquals("Cardiologie, Traumatologie", response.getDiagnostic());
+        assertTrue(response.getDiagnostics().contains(DiagnosticType.CARDIOLOGIE));
+        assertTrue(response.getDiagnostics().contains(DiagnosticType.TRAUMATOLOGIE));
     }
 
     @Test
     void testDiagnostiquerMultipleDe3() {
         DiagnosticResponse response = diagnosticService.diagnostiquer(9);
         assertEquals(9, response.getIndexSante());
-        assertEquals("Cardiologie", response.getDiagnostic());
+        assertTrue(response.getDiagnostics().contains(DiagnosticType.CARDIOLOGIE));
     }
 
     @Test
     void testDiagnostiquerMultipleDe5() {
         DiagnosticResponse response = diagnosticService.diagnostiquer(25);
         assertEquals(25, response.getIndexSante());
-        assertEquals("Traumatologie", response.getDiagnostic());
+        assertTrue(response.getDiagnostics().contains(DiagnosticType.TRAUMATOLOGIE));
     }
 
     @Test
     void testDiagnostiquerAucunePathologie() {
         DiagnosticResponse response = diagnosticService.diagnostiquer(7);
         assertEquals(7, response.getIndexSante());
-        assertEquals("Aucune pathologie détectée", response.getDiagnostic());
+        assertTrue(response.getDiagnostics().contains(DiagnosticType.AUCUNE_PATHOLOGIE));
     }
 
     @Test
     void testDiagnostiquerZero() {
         DiagnosticResponse response = diagnosticService.diagnostiquer(0);
         assertEquals(0, response.getIndexSante());
-        assertEquals("Aucune pathologie détectée", response.getDiagnostic());
+        assertTrue(response.getDiagnostics().contains(DiagnosticType.AUCUNE_PATHOLOGIE));
     }
 
     @Test

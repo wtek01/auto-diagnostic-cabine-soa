@@ -1,6 +1,7 @@
 package com.hopital.futur.autodiagnostic.controller;
 
 import com.hopital.futur.autodiagnostic.model.DiagnosticResponse;
+import com.hopital.futur.autodiagnostic.model.DiagnosticType;
 import com.hopital.futur.autodiagnostic.service.DiagnosticService;
 import com.hopital.futur.autodiagnostic.exception.InvalidIndexSanteException;
 import org.junit.jupiter.api.Test;
@@ -9,6 +10,8 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
+
+import java.util.Arrays;
 
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -25,7 +28,7 @@ class DiagnosticControllerTest {
 
     @Test
     void testDiagnostiquerValid() throws Exception {
-        when(diagnosticService.diagnostiquer(33)).thenReturn(new DiagnosticResponse(33, "Cardiologie"));
+        DiagnosticResponse response = new DiagnosticResponse(33, Arrays.asList(DiagnosticType.CARDIOLOGIE));
 
         mockMvc.perform(get("/api/diagnostic/33")
                         .accept(MediaType.APPLICATION_JSON))
@@ -48,7 +51,7 @@ class DiagnosticControllerTest {
 
     @Test
     void testDiagnostiquerZero() throws Exception {
-        when(diagnosticService.diagnostiquer(0)).thenReturn(new DiagnosticResponse(0, "Aucune pathologie détectée"));
+        when(diagnosticService.diagnostiquer(0)).thenReturn(new DiagnosticResponse(0, Arrays.asList(DiagnosticType.AUCUNE_PATHOLOGIE)));
 
         mockMvc.perform(get("/api/diagnostic/0")
                         .accept(MediaType.APPLICATION_JSON))
@@ -60,7 +63,7 @@ class DiagnosticControllerTest {
 
     @Test
     void testDiagnostiquerLargeNumber() throws Exception {
-        when(diagnosticService.diagnostiquer(1000000)).thenReturn(new DiagnosticResponse(1000000, "Aucune pathologie détectée"));
+        when(diagnosticService.diagnostiquer(1000000)).thenReturn(new DiagnosticResponse(1000000, Arrays.asList(DiagnosticType.AUCUNE_PATHOLOGIE)));
 
         mockMvc.perform(get("/api/diagnostic/1000000")
                         .accept(MediaType.APPLICATION_JSON))
