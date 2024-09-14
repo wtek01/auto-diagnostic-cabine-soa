@@ -472,3 +472,276 @@ Caused by: java.lang.ClassNotFoundException: com.hopital.futur.autodiagnostic.mo
 2024-09-14 17:01:59,543 INFO c.h.f.a.s.DiagnosticService [main] D�but du diagnostic pour l'index de sant� : 0
 2024-09-14 17:01:59,549 INFO c.h.f.a.s.DiagnosticService [main] D�but du diagnostic pour l'index de sant� : -15
 2024-09-14 17:01:59,550 ERROR c.h.f.a.s.DiagnosticService [main] Index de sant� invalide : -15
+2024-09-14 18:47:47,492 INFO o.s.b.StartupInfoLogger [main] Starting DiagnosticControllerTest using Java 17.0.8 with PID 7748 (started by wmelk in C:\dev\Test Technique\auto-diagnostic-cabine)
+2024-09-14 18:47:47,496 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v3.3.3, Spring v6.1.12
+2024-09-14 18:47:47,497 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-09-14 18:47:50,688 INFO o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2024-09-14 18:47:50,689 INFO o.s.w.s.FrameworkServlet [main] Initializing Servlet ''
+2024-09-14 18:47:50,694 INFO o.s.w.s.FrameworkServlet [main] Completed initialization in 2 ms
+2024-09-14 18:47:50,736 INFO o.s.b.StartupInfoLogger [main] Started DiagnosticControllerTest in 4.097 seconds (process running for 5.847)
+2024-09-14 18:47:50,941 INFO c.h.f.a.c.DiagnosticController [main] Requ�te re�ue pour diagnostiquer l'index de sant� : -1
+2024-09-14 18:47:50,957 ERROR c.h.f.a.e.GlobalExceptionHandler [main] InvalidIndexSanteException: L'index de sant� ne peut pas �tre n�gatif
+2024-09-14 18:47:51,320 INFO c.h.f.a.c.DiagnosticController [main] Requ�te re�ue pour diagnostiquer l'index de sant� : 15
+2024-09-14 18:47:51,323 INFO c.h.f.a.c.DiagnosticController [main] Diagnostic �tabli avec succ�s pour l'index de sant� : 15
+2024-09-14 18:47:51,362 INFO c.h.f.a.c.DiagnosticController [main] Requ�te re�ue pour diagnostiquer l'index de sant� : 25
+2024-09-14 18:47:51,364 INFO c.h.f.a.c.DiagnosticController [main] Diagnostic �tabli avec succ�s pour l'index de sant� : 25
+2024-09-14 18:47:51,380 INFO c.h.f.a.c.DiagnosticController [main] Requ�te re�ue pour diagnostiquer l'index de sant� : 0
+2024-09-14 18:47:51,382 INFO c.h.f.a.c.DiagnosticController [main] Diagnostic �tabli avec succ�s pour l'index de sant� : 0
+2024-09-14 18:48:25,272 INFO o.s.b.StartupInfoLogger [main] Starting DiagnosticControllerTest using Java 17.0.8 with PID 22232 (started by wmelk in C:\dev\Test Technique\auto-diagnostic-cabine)
+2024-09-14 18:48:25,275 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v3.3.3, Spring v6.1.12
+2024-09-14 18:48:25,277 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-09-14 18:48:28,621 INFO o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2024-09-14 18:48:28,623 INFO o.s.w.s.FrameworkServlet [main] Initializing Servlet ''
+2024-09-14 18:48:28,641 INFO o.s.w.s.FrameworkServlet [main] Completed initialization in 3 ms
+2024-09-14 18:48:28,709 INFO o.s.b.StartupInfoLogger [main] Started DiagnosticControllerTest in 4.354 seconds (process running for 6.284)
+2024-09-14 18:48:28,981 INFO c.h.f.a.c.DiagnosticController [main] Requête reçue pour diagnostiquer l'index de santé : -1
+2024-09-14 18:48:28,997 ERROR c.h.f.a.e.GlobalExceptionHandler [main] InvalidIndexSanteException: L'index de santé ne peut pas être négatif
+2024-09-14 18:48:29,409 INFO c.h.f.a.c.DiagnosticController [main] Requête reçue pour diagnostiquer l'index de santé : 15
+2024-09-14 18:48:29,412 INFO c.h.f.a.c.DiagnosticController [main] Diagnostic établi avec succès pour l'index de santé : 15
+2024-09-14 18:48:29,463 INFO c.h.f.a.c.DiagnosticController [main] Requête reçue pour diagnostiquer l'index de santé : 25
+2024-09-14 18:48:29,465 INFO c.h.f.a.c.DiagnosticController [main] Diagnostic établi avec succès pour l'index de santé : 25
+2024-09-14 18:48:29,485 INFO c.h.f.a.c.DiagnosticController [main] Requête reçue pour diagnostiquer l'index de santé : 0
+2024-09-14 18:48:29,486 INFO c.h.f.a.c.DiagnosticController [main] Diagnostic établi avec succès pour l'index de santé : 0
+2024-09-14 18:49:03,889 INFO o.s.b.StartupInfoLogger [restartedMain] Starting AutoDiagnosticCabineApplication using Java 17.0.8 with PID 5328 (C:\dev\Test Technique\auto-diagnostic-cabine\target\classes started by wmelk in C:\dev\Test Technique\auto-diagnostic-cabine)
+2024-09-14 18:49:03,892 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v3.3.3, Spring v6.1.12
+2024-09-14 18:49:03,894 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-09-14 18:49:04,024 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-14 18:49:04,025 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-14 18:49:07,504 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8080 (http)
+2024-09-14 18:49:07,527 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-14 18:49:07,535 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-09-14 18:49:07,536 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-14 18:49:07,668 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-09-14 18:49:07,670 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 3641 ms
+2024-09-14 18:49:09,415 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-09-14 18:49:09,431 INFO o.s.b.a.e.w.EndpointLinksResolver [restartedMain] Exposing 1 endpoint beneath base path '/actuator'
+2024-09-14 18:49:09,536 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2024-09-14 18:49:09,578 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8080 (http) with context path '/'
+2024-09-14 18:49:09,617 INFO o.s.b.StartupInfoLogger [restartedMain] Started AutoDiagnosticCabineApplication in 6.949 seconds (process running for 8.884)
+2024-09-14 18:49:36,209 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-14 18:49:36,210 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-09-14 18:49:36,212 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 2 ms
+2024-09-14 18:49:36,307 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-1] Requête reçue pour diagnostiquer l'index de santé : 15
+2024-09-14 18:49:36,312 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-1] Diagnostic établi avec succès pour l'index de santé : 15
+2024-09-14 18:49:54,042 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-2] Requête reçue pour diagnostiquer l'index de santé : 30
+2024-09-14 18:49:54,043 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-2] Diagnostic établi avec succès pour l'index de santé : 30
+2024-09-14 18:49:59,358 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-3] Requête reçue pour diagnostiquer l'index de santé : 33
+2024-09-14 18:49:59,359 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-3] Diagnostic établi avec succès pour l'index de santé : 33
+2024-09-14 18:50:06,292 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-4] Requête reçue pour diagnostiquer l'index de santé : -33
+2024-09-14 18:50:06,298 ERROR c.h.f.a.e.GlobalExceptionHandler [http-nio-8080-exec-4] InvalidIndexSanteException: L'index de santé ne peut pas être négatif : -33
+2024-09-14 18:50:06,305 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-4] Resolved [com.hopital.futur.autodiagnostic.exception.InvalidIndexSanteException: L'index de santé ne peut pas être négatif : -33]
+2024-09-14 18:50:15,917 ERROR c.h.f.a.e.GlobalExceptionHandler [http-nio-8080-exec-10] Type d'argument invalide: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "jkdjkjkdjkffffdfgdsf"
+2024-09-14 18:50:15,921 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-10] Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "jkdjkjkdjkffffdfgdsf"]
+2024-09-14 18:50:22,210 INFO o.s.a.AbstractOpenApiResource [http-nio-8080-exec-3] Init duration for springdoc-openapi is: 426 ms
+2024-09-14 18:50:56,504 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-4] Requête reçue pour diagnostiquer l'index de santé : 15
+2024-09-14 18:50:56,505 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-4] Diagnostic établi avec succès pour l'index de santé : 15
+2024-09-14 18:51:25,216 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-1] Requête reçue pour diagnostiquer l'index de santé : -15
+2024-09-14 18:51:25,218 ERROR c.h.f.a.e.GlobalExceptionHandler [http-nio-8080-exec-1] InvalidIndexSanteException: L'index de santé ne peut pas être négatif : -15
+2024-09-14 18:51:25,220 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-1] Resolved [com.hopital.futur.autodiagnostic.exception.InvalidIndexSanteException: L'index de santé ne peut pas être négatif : -15]
+2024-09-14 18:55:31,514 INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-09-14 18:55:31,521 INFO o.a.j.l.DirectJDKLog [Thread-5] Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-14 18:55:31,803 INFO o.s.b.StartupInfoLogger [restartedMain] Starting AutoDiagnosticCabineApplication using Java 17.0.8 with PID 5328 (C:\dev\Test Technique\auto-diagnostic-cabine\target\classes started by wmelk in C:\dev\Test Technique\auto-diagnostic-cabine)
+2024-09-14 18:55:31,804 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v3.3.3, Spring v6.1.12
+2024-09-14 18:55:31,805 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-09-14 18:55:32,960 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8080 (http)
+2024-09-14 18:55:32,962 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-14 18:55:32,963 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-09-14 18:55:32,964 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-14 18:55:33,015 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-09-14 18:55:33,016 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1206 ms
+2024-09-14 18:55:33,087 WARN o.s.c.s.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'diagnosticController' defined in file [C:\dev\Test Technique\auto-diagnostic-cabine\target\classes\com\hopital\futur\autodiagnostic\controller\DiagnosticController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.hopital.futur.autodiagnostic.service.DiagnosticService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-09-14 18:55:33,088 INFO o.a.j.l.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2024-09-14 18:55:33,105 INFO o.s.b.a.l.ConditionEvaluationReportLogger [restartedMain] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-14 18:55:33,176 ERROR o.s.b.d.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.hopital.futur.autodiagnostic.controller.DiagnosticController required a bean of type 'com.hopital.futur.autodiagnostic.service.DiagnosticService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.hopital.futur.autodiagnostic.service.DiagnosticService' in your configuration.
+
+2024-09-14 18:55:34,718 INFO o.s.b.StartupInfoLogger [restartedMain] Starting AutoDiagnosticCabineApplication using Java 17.0.8 with PID 5328 (C:\dev\Test Technique\auto-diagnostic-cabine\target\classes started by wmelk in C:\dev\Test Technique\auto-diagnostic-cabine)
+2024-09-14 18:55:34,719 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v3.3.3, Spring v6.1.12
+2024-09-14 18:55:34,720 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-09-14 18:55:35,873 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8080 (http)
+2024-09-14 18:55:35,875 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-14 18:55:35,877 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-09-14 18:55:35,878 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-14 18:55:35,944 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-09-14 18:55:35,944 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1217 ms
+2024-09-14 18:55:36,403 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-09-14 18:55:36,411 INFO o.s.b.a.e.w.EndpointLinksResolver [restartedMain] Exposing 1 endpoint beneath base path '/actuator'
+2024-09-14 18:55:36,433 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2024-09-14 18:55:36,440 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8080 (http) with context path '/'
+2024-09-14 18:55:36,450 INFO o.s.b.StartupInfoLogger [restartedMain] Started AutoDiagnosticCabineApplication in 1.812 seconds (process running for 395.717)
+2024-09-14 18:55:36,456 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2024-09-14 18:55:37,263 INFO o.s.b.StartupInfoLogger [main] Starting DiagnosticControllerTest using Java 17.0.8 with PID 12844 (started by wmelk in C:\dev\Test Technique\auto-diagnostic-cabine)
+2024-09-14 18:55:37,268 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v3.3.3, Spring v6.1.12
+2024-09-14 18:55:37,271 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-09-14 18:55:40,190 INFO o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2024-09-14 18:55:40,191 INFO o.s.w.s.FrameworkServlet [main] Initializing Servlet ''
+2024-09-14 18:55:40,197 INFO o.s.w.s.FrameworkServlet [main] Completed initialization in 2 ms
+2024-09-14 18:55:40,263 INFO o.s.b.StartupInfoLogger [main] Started DiagnosticControllerTest in 4.103 seconds (process running for 6.414)
+2024-09-14 18:55:40,469 INFO c.h.f.a.c.DiagnosticController [main] Requête reçue pour diagnostiquer l'index de santé : -1
+2024-09-14 18:55:40,483 ERROR c.h.f.a.e.GlobalExceptionHandler [main] InvalidIndexSanteException: L'index de santé ne peut pas être négatif
+2024-09-14 18:55:40,791 INFO c.h.f.a.c.DiagnosticController [main] Requête reçue pour diagnostiquer l'index de santé : 15
+2024-09-14 18:55:40,794 INFO c.h.f.a.c.DiagnosticController [main] Diagnostic établi avec succès pour l'index de santé : 15
+2024-09-14 18:55:40,826 INFO c.h.f.a.c.DiagnosticController [main] Requête reçue pour diagnostiquer l'index de santé : 25
+2024-09-14 18:55:40,827 INFO c.h.f.a.c.DiagnosticController [main] Diagnostic établi avec succès pour l'index de santé : 25
+2024-09-14 18:55:40,839 INFO c.h.f.a.c.DiagnosticController [main] Requête reçue pour diagnostiquer l'index de santé : 0
+2024-09-14 18:55:40,840 INFO c.h.f.a.c.DiagnosticController [main] Diagnostic établi avec succès pour l'index de santé : 0
+2024-09-14 18:55:56,391 INFO o.s.b.StartupInfoLogger [main] Starting DiagnosticControllerTest using Java 17.0.8 with PID 16476 (started by wmelk in C:\dev\Test Technique\auto-diagnostic-cabine)
+2024-09-14 18:55:56,394 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v3.3.3, Spring v6.1.12
+2024-09-14 18:55:56,395 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-09-14 18:55:59,729 INFO o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2024-09-14 18:55:59,731 INFO o.s.w.s.FrameworkServlet [main] Initializing Servlet ''
+2024-09-14 18:55:59,737 INFO o.s.w.s.FrameworkServlet [main] Completed initialization in 2 ms
+2024-09-14 18:55:59,790 INFO o.s.b.StartupInfoLogger [main] Started DiagnosticControllerTest in 4.152 seconds (process running for 6.407)
+2024-09-14 18:55:59,977 INFO c.h.f.a.c.DiagnosticController [main] Requête reçue pour diagnostiquer l'index de santé : -1
+2024-09-14 18:55:59,990 ERROR c.h.f.a.e.GlobalExceptionHandler [main] InvalidIndexSanteException: L'index de santé ne peut pas être négatif
+2024-09-14 18:56:00,241 INFO c.h.f.a.c.DiagnosticController [main] Requête reçue pour diagnostiquer l'index de santé : 15
+2024-09-14 18:56:00,244 INFO c.h.f.a.c.DiagnosticController [main] Diagnostic établi avec succès pour l'index de santé : 15
+2024-09-14 18:56:00,277 INFO c.h.f.a.c.DiagnosticController [main] Requête reçue pour diagnostiquer l'index de santé : 25
+2024-09-14 18:56:00,279 INFO c.h.f.a.c.DiagnosticController [main] Diagnostic établi avec succès pour l'index de santé : 25
+2024-09-14 18:56:00,298 INFO c.h.f.a.c.DiagnosticController [main] Requête reçue pour diagnostiquer l'index de santé : 0
+2024-09-14 18:56:00,299 INFO c.h.f.a.c.DiagnosticController [main] Diagnostic établi avec succès pour l'index de santé : 0
+2024-09-14 19:26:35,508 INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 5 class path changes (0 additions, 5 deletions, 0 modifications)
+2024-09-14 19:26:35,512 INFO o.a.j.l.DirectJDKLog [Thread-7] Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-14 19:26:35,716 INFO o.s.b.StartupInfoLogger [restartedMain] Starting AutoDiagnosticCabineApplication using Java 17.0.8 with PID 5328 (C:\dev\Test Technique\auto-diagnostic-cabine\target\classes started by wmelk in C:\dev\Test Technique\auto-diagnostic-cabine)
+2024-09-14 19:26:35,717 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v3.3.3, Spring v6.1.12
+2024-09-14 19:26:35,717 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-09-14 19:26:35,755 WARN o.s.c.s.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.hopital.futur.autodiagnostic.rules.CardiologyRule]
+2024-09-14 19:26:35,764 ERROR o.s.b.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.hopital.futur.autodiagnostic.rules.CardiologyRule]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:251)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:189)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:314)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:246)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:197)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:165)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:417)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:789)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:607)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.hopital.futur.autodiagnostic.AutoDiagnosticCabineApplication.main(AutoDiagnosticCabineApplication.java:9)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.io.FileNotFoundException: class path resource [com/hopital/futur/autodiagnostic/rules/DiagnosticRule.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:215)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:54)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:630)
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:956)
+	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:396)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:342)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:246)
+	... 23 common frames omitted
+2024-09-14 19:26:38,300 INFO o.s.b.StartupInfoLogger [restartedMain] Starting AutoDiagnosticCabineApplication using Java 17.0.8 with PID 5328 (C:\dev\Test Technique\auto-diagnostic-cabine\target\classes started by wmelk in C:\dev\Test Technique\auto-diagnostic-cabine)
+2024-09-14 19:26:38,301 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v3.3.3, Spring v6.1.12
+2024-09-14 19:26:38,302 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-09-14 19:26:39,579 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8080 (http)
+2024-09-14 19:26:39,581 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-14 19:26:39,582 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-09-14 19:26:39,583 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-14 19:26:39,647 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-09-14 19:26:39,648 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1333 ms
+2024-09-14 19:26:40,067 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-09-14 19:26:40,074 INFO o.s.b.a.e.w.EndpointLinksResolver [restartedMain] Exposing 1 endpoint beneath base path '/actuator'
+2024-09-14 19:26:40,096 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2024-09-14 19:26:40,112 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8080 (http) with context path '/'
+2024-09-14 19:26:40,127 INFO o.s.b.StartupInfoLogger [restartedMain] Started AutoDiagnosticCabineApplication in 1.895 seconds (process running for 2259.394)
+2024-09-14 19:26:40,137 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2024-09-14 19:26:40,964 INFO o.s.b.StartupInfoLogger [main] Starting DiagnosticControllerTest using Java 17.0.8 with PID 1576 (started by wmelk in C:\dev\Test Technique\auto-diagnostic-cabine)
+2024-09-14 19:26:40,966 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v3.3.3, Spring v6.1.12
+2024-09-14 19:26:40,967 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-09-14 19:26:44,049 INFO o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2024-09-14 19:26:44,050 INFO o.s.w.s.FrameworkServlet [main] Initializing Servlet ''
+2024-09-14 19:26:44,057 INFO o.s.w.s.FrameworkServlet [main] Completed initialization in 3 ms
+2024-09-14 19:26:44,134 INFO o.s.b.StartupInfoLogger [main] Started DiagnosticControllerTest in 4.018 seconds (process running for 6.413)
+2024-09-14 19:26:44,324 INFO c.h.f.a.c.DiagnosticController [main] Requête reçue pour diagnostiquer l'index de santé : -1
+2024-09-14 19:26:44,337 ERROR c.h.f.a.e.GlobalExceptionHandler [main] InvalidIndexSanteException: L'index de santé ne peut pas être négatif
+2024-09-14 19:26:44,656 INFO c.h.f.a.c.DiagnosticController [main] Requête reçue pour diagnostiquer l'index de santé : 15
+2024-09-14 19:26:44,658 INFO c.h.f.a.c.DiagnosticController [main] Diagnostic établi avec succès pour l'index de santé : 15
+2024-09-14 19:26:44,691 INFO c.h.f.a.c.DiagnosticController [main] Requête reçue pour diagnostiquer l'index de santé : 25
+2024-09-14 19:26:44,692 INFO c.h.f.a.c.DiagnosticController [main] Diagnostic établi avec succès pour l'index de santé : 25
+2024-09-14 19:26:44,717 INFO c.h.f.a.c.DiagnosticController [main] Requête reçue pour diagnostiquer l'index de santé : 0
+2024-09-14 19:26:44,719 INFO c.h.f.a.c.DiagnosticController [main] Diagnostic établi avec succès pour l'index de santé : 0
+2024-09-14 19:27:02,187 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-3] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-14 19:27:02,187 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-3] Initializing Servlet 'dispatcherServlet'
+2024-09-14 19:27:02,190 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-3] Completed initialization in 2 ms
+2024-09-14 19:27:02,199 ERROR c.h.f.a.e.GlobalExceptionHandler [http-nio-8080-exec-3] Type d'argument invalide: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "jkdjkjkdjkffffdfgdsf"
+2024-09-14 19:27:02,207 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-3] Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "jkdjkjkdjkffffdfgdsf"]
+2024-09-14 19:27:09,387 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-4] Requête reçue pour diagnostiquer l'index de santé : 15
+2024-09-14 19:27:09,390 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-4] Diagnostic établi avec succès pour l'index de santé : 15
+2024-09-14 19:27:44,952 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-2] Requête reçue pour diagnostiquer l'index de santé : 33
+2024-09-14 19:27:44,953 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-2] Diagnostic établi avec succès pour l'index de santé : 33
+2024-09-14 19:27:55,866 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-7] Requête reçue pour diagnostiquer l'index de santé : 30
+2024-09-14 19:27:55,867 INFO c.h.f.a.c.DiagnosticController [http-nio-8080-exec-7] Diagnostic établi avec succès pour l'index de santé : 30
+2024-09-14 19:37:22,837 INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 16 class path changes (0 additions, 16 deletions, 0 modifications)
+2024-09-14 19:37:22,840 INFO o.a.j.l.DirectJDKLog [Thread-14] Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-14 19:37:32,697 INFO o.s.b.StartupInfoLogger [restartedMain] Starting AutoDiagnosticCabineApplication using Java 17.0.8 with PID 5328 (C:\dev\Test Technique\auto-diagnostic-cabine\target\classes started by wmelk in C:\dev\Test Technique\auto-diagnostic-cabine)
+2024-09-14 19:37:32,699 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v3.3.3, Spring v6.1.12
+2024-09-14 19:37:32,700 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-09-14 19:37:33,612 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8080 (http)
+2024-09-14 19:37:33,613 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-09-14 19:37:33,614 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-14 19:37:33,643 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-09-14 19:37:33,644 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 938 ms
+2024-09-14 19:37:33,880 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-09-14 19:37:33,887 INFO o.s.b.a.e.w.EndpointLinksResolver [restartedMain] Exposing 1 endpoint beneath base path '/actuator'
+2024-09-14 19:37:33,931 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8080 (http) with context path '/'
+2024-09-14 19:37:33,946 INFO o.s.b.StartupInfoLogger [restartedMain] Started AutoDiagnosticCabineApplication in 1.319 seconds (process running for 2913.214)
+2024-09-14 19:37:33,950 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2024-09-14 19:37:36,370 INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 14 class path changes (14 additions, 0 deletions, 0 modifications)
+2024-09-14 19:37:36,626 INFO o.s.b.StartupInfoLogger [restartedMain] Starting AutoDiagnosticCabineApplication using Java 17.0.8 with PID 5328 (C:\dev\Test Technique\auto-diagnostic-cabine\target\classes started by wmelk in C:\dev\Test Technique\auto-diagnostic-cabine)
+2024-09-14 19:37:36,626 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v3.3.3, Spring v6.1.12
+2024-09-14 19:37:36,627 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-09-14 19:37:37,282 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8080 (http)
+2024-09-14 19:37:37,283 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-09-14 19:37:37,284 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-14 19:37:37,330 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-09-14 19:37:37,331 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 701 ms
+2024-09-14 19:37:37,812 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-09-14 19:37:37,817 INFO o.s.b.a.e.w.EndpointLinksResolver [restartedMain] Exposing 1 endpoint beneath base path '/actuator'
+2024-09-14 19:37:37,838 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8080 (http) with context path '/'
+2024-09-14 19:37:37,849 INFO o.s.b.StartupInfoLogger [restartedMain] Started AutoDiagnosticCabineApplication in 1.273 seconds (process running for 2917.117)
+2024-09-14 19:37:37,853 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2024-09-14 19:37:41,375 INFO o.s.b.StartupInfoLogger [main] Starting DiagnosticControllerTest using Java 17.0.8 with PID 10224 (started by wmelk in C:\dev\Test Technique\auto-diagnostic-cabine)
+2024-09-14 19:37:41,379 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v3.3.3, Spring v6.1.12
+2024-09-14 19:37:41,380 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-09-14 19:37:44,356 INFO o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2024-09-14 19:37:44,358 INFO o.s.w.s.FrameworkServlet [main] Initializing Servlet ''
+2024-09-14 19:37:44,363 INFO o.s.w.s.FrameworkServlet [main] Completed initialization in 2 ms
+2024-09-14 19:37:44,410 INFO o.s.b.StartupInfoLogger [main] Started DiagnosticControllerTest in 3.727 seconds (process running for 5.579)
+2024-09-14 19:37:44,594 INFO c.h.f.a.c.DiagnosticController [main] Requ�te re�ue pour diagnostiquer l'index de sant� : -1
+2024-09-14 19:37:44,607 ERROR c.h.f.a.e.GlobalExceptionHandler [main] InvalidIndexSanteException: L'index de sant� ne peut pas �tre n�gatif
+2024-09-14 19:37:44,936 INFO c.h.f.a.c.DiagnosticController [main] Requ�te re�ue pour diagnostiquer l'index de sant� : 15
+2024-09-14 19:37:44,939 INFO c.h.f.a.c.DiagnosticController [main] Diagnostic �tabli avec succ�s pour l'index de sant� : 15
+2024-09-14 19:37:44,970 INFO c.h.f.a.c.DiagnosticController [main] Requ�te re�ue pour diagnostiquer l'index de sant� : 25
+2024-09-14 19:37:44,971 INFO c.h.f.a.c.DiagnosticController [main] Diagnostic �tabli avec succ�s pour l'index de sant� : 25
+2024-09-14 19:37:44,984 INFO c.h.f.a.c.DiagnosticController [main] Requ�te re�ue pour diagnostiquer l'index de sant� : 0
+2024-09-14 19:37:44,985 INFO c.h.f.a.c.DiagnosticController [main] Diagnostic �tabli avec succ�s pour l'index de sant� : 0

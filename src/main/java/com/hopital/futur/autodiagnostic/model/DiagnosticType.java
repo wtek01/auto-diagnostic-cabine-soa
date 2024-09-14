@@ -17,7 +17,6 @@ public enum DiagnosticType {
 
     public String getDescription() { return description; }
 
-    // Add this method
     public static DiagnosticType fromCode(String code) {
         for (DiagnosticType type : DiagnosticType.values()) {
             if (type.getCode().equals(code)) {

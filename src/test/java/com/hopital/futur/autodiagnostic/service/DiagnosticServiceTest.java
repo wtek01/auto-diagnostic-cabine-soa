@@ -1,15 +1,13 @@
 package com.hopital.futur.autodiagnostic.service;
 
-import com.hopital.futur.autodiagnostic.dto.DiagnosticDetail;
+import com.hopital.futur.autodiagnostic.dto.DiagnosticDTO;
 import com.hopital.futur.autodiagnostic.exception.InvalidIndexSanteException;
-import com.hopital.futur.autodiagnostic.response.DiagnosticResponse;
 import com.hopital.futur.autodiagnostic.rules.CardiologyRule;
 import com.hopital.futur.autodiagnostic.rules.TraumatologyRule;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.api.Assertions;
 
 import java.util.Arrays;
 import java.util.List;
@@ -29,35 +27,40 @@ class DiagnosticServiceTest {
 
     @ParameterizedTest
     @CsvSource({
-            "15, CARD|TRAUM",
-            "9, CARD",
-            "25, TRAUM",
-            "7, NONE",
-            "0, NONE"
+            "15, CARD|TRAUM, Cardiologie|Traumatologie",
+            "9, CARD, Cardiologie",
+            "25, TRAUM, Traumatologie",
+            "7, NONE, Aucune pathologie détectée",
+            "0, NONE, Aucune pathologie détectée"
     })
-    void testDiagnostiquer(int indexSante, String expectedCodesStr) {
-        DiagnosticResponse response = diagnosticService.diagnostiquer(indexSante);
-        Assertions.assertEquals(indexSante, response.getIndexSante());
-
+    void testDiagnostiquer(int indexSante, String expectedCodesStr, String expectedDescriptionsStr) {
         List<String> expectedCodes = Arrays.asList(expectedCodesStr.split("\\|"));
+        List<String> expectedDescriptions = Arrays.asList(expectedDescriptionsStr.split("\\|"));
 
-        // Extraire les codes réels de la réponse
-        List<String> actualCodes = response.getDiagnostics().stream()
-                .map(DiagnosticDetail::getCode)
-                .collect(Collectors.toList());
+        // Appel du service
+        List<DiagnosticDTO> response = diagnosticService.diagnostiquer(indexSante);
 
-        Assertions.assertEquals(expectedCodes.size(), actualCodes.size(), "Le nombre de diagnostics ne correspond pas.");
+        // Vérification que le nombre de diagnostics est correct
+        Assertions.assertEquals(expectedCodes.size(), response.size(), "Le nombre de diagnostics ne correspond pas.");
 
-        for (String expectedCode : expectedCodes) {
-            Assertions.assertTrue(actualCodes.contains(expectedCode),
-                    "Le code de diagnostic attendu n'est pas présent : " + expectedCode);
+        // Vérification des valeurs des diagnostics
+        for (int i = 0; i < expectedCodes.size(); i++) {
+            DiagnosticDTO diagnostic = response.get(i);
+            Assertions.assertEquals(indexSante, diagnostic.getIndexSante(), "Index de santé incorrect.");
+            Assertions.assertEquals(expectedCodes.get(i), diagnostic.getCode(), "Code de diagnostic incorrect.");
+            Assertions.assertEquals(expectedDescriptions.get(i), diagnostic.getDescription(), "Description de diagnostic incorrecte.");
         }
     }
 
-    @Test
-    void testDiagnostiquerNombreNegatif() {
+    @ParameterizedTest
+    @CsvSource({
+            "-1",
+            "-15"
+    })
+    void testDiagnostiquerNombreNegatif(int indexSante) {
+        // Test des index de santé négatifs
         Assertions.assertThrows(InvalidIndexSanteException.class, () -> {
-            diagnosticService.diagnostiquer(-15);
-        });
+            diagnosticService.diagnostiquer(indexSante);
+        }, "Un index de santé négatif devrait déclencher une exception.");
     }
 }
