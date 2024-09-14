@@ -16,8 +16,8 @@ public class DiagnosticService {
     private static final int SEUIL_AVERTISSEMENT = 1000; // Exemple de seuil pour les valeurs inhabituelles
 
     // Constantes pour les seuils de diagnostic
-    private static final int SEUIL_CARDIOLOGIE = 3;
-    private static final int SEUIL_TRAUMATOLOGIE = 5;
+    private static final int DIVISEUR_CARDIOLOGIE  = 3;
+    private static final int DIVISEUR_TRAUMATOLOGIE = 5;
 
     /**
      * Effectue un diagnostic basé sur l'index de santé fourni.
@@ -42,10 +42,10 @@ public class DiagnosticService {
 
         List<DiagnosticType> diagnostics = new ArrayList<>();
 
-        if (indexSante % SEUIL_CARDIOLOGIE  == 0) {
+        if (indexSante % DIVISEUR_CARDIOLOGIE  == 0) {
             diagnostics.add(DiagnosticType.CARDIOLOGIE);
         }
-        if (indexSante % SEUIL_TRAUMATOLOGIE  == 0) {
+        if (indexSante % DIVISEUR_TRAUMATOLOGIE  == 0) {
             diagnostics.add(DiagnosticType.TRAUMATOLOGIE);
         }
         if (diagnostics.isEmpty()) {

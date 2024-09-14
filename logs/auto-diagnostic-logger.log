@@ -1843,3 +1843,63 @@ com.hopital.futur.autodiagnostic.exception.InvalidIndexSanteException: L'index d
 2024-09-13 16:42:58,793 ERROR c.h.f.a.s.DiagnosticService [http-nio-8080-exec-6] Index de santÃ© invalide : -11
 2024-09-13 16:42:58,795 ERROR c.h.f.a.e.GlobalExceptionHandler [http-nio-8080-exec-6] InvalidIndexSanteException: L'index de santÃ© ne peut pas Ãªtre nÃ©gatif
 2024-09-13 16:42:58,800 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-6] Resolved [com.hopital.futur.autodiagnostic.exception.InvalidIndexSanteException: L'index de santÃ© ne peut pas Ãªtre nÃ©gatif]
+2024-09-13 17:08:00,360 INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 11 class path changes (0 additions, 11 deletions, 0 modifications)
+2024-09-13 17:08:00,376 INFO o.a.j.l.DirectJDKLog [Thread-5] Pausing ProtocolHandler ["http-nio-8080"]
+2024-09-13 17:08:00,377 INFO o.a.j.l.DirectJDKLog [Thread-5] Stopping service [Tomcat]
+2024-09-13 17:08:00,380 INFO o.a.j.l.DirectJDKLog [Thread-5] Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-09-13 17:08:00,391 INFO o.a.j.l.DirectJDKLog [Thread-5] Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-13 17:08:00,394 INFO o.a.j.l.DirectJDKLog [Thread-5] Destroying ProtocolHandler ["http-nio-8080"]
+2024-09-13 17:08:10,113 INFO o.s.b.StartupInfoLogger [restartedMain] Starting AutoDiagnosticCabineApplication using Java 17.0.8 with PID 24332 (C:\dev\Test Technique\auto-diagnostic-cabine\target\classes started by wmelk in C:\dev\Test Technique\auto-diagnostic-cabine)
+2024-09-13 17:08:10,115 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-09-13 17:08:10,115 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-09-13 17:08:10,938 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2024-09-13 17:08:10,939 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-09-13 17:08:10,940 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.13]
+2024-09-13 17:08:10,986 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-09-13 17:08:10,987 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 868 ms
+2024-09-13 17:08:11,267 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-09-13 17:08:11,271 INFO o.s.b.a.e.w.EndpointLinksResolver [restartedMain] Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-09-13 17:08:11,299 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2024-09-13 17:08:11,310 INFO o.s.b.StartupInfoLogger [restartedMain] Started AutoDiagnosticCabineApplication in 1.258 seconds (process running for 1560.1)
+2024-09-13 17:08:11,317 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2024-09-13 17:08:13,738 INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 9 class path changes (9 additions, 0 deletions, 0 modifications)
+2024-09-13 17:08:13,753 INFO o.a.j.l.DirectJDKLog [Thread-11] Stopping service [Tomcat]
+2024-09-13 17:08:13,854 INFO o.s.b.StartupInfoLogger [restartedMain] Starting AutoDiagnosticCabineApplication using Java 17.0.8 with PID 24332 (C:\dev\Test Technique\auto-diagnostic-cabine\target\classes started by wmelk in C:\dev\Test Technique\auto-diagnostic-cabine)
+2024-09-13 17:08:13,855 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-09-13 17:08:13,855 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-09-13 17:08:14,565 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2024-09-13 17:08:14,567 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-09-13 17:08:14,568 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.13]
+2024-09-13 17:08:14,643 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-09-13 17:08:14,643 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 784 ms
+2024-09-13 17:08:14,983 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-09-13 17:08:15,005 INFO o.s.b.a.e.w.EndpointLinksResolver [restartedMain] Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-09-13 17:08:15,024 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2024-09-13 17:08:15,032 INFO o.s.b.StartupInfoLogger [restartedMain] Started AutoDiagnosticCabineApplication in 1.22 seconds (process running for 1563.821)
+2024-09-13 17:08:15,036 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2024-09-13 17:08:18,782 INFO o.s.b.StartupInfoLogger [main] Starting DiagnosticControllerTest using Java 17.0.8 with PID 19396 (started by wmelk in C:\dev\Test Technique\auto-diagnostic-cabine)
+2024-09-13 17:08:18,785 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v3.3.3, Spring v6.1.12
+2024-09-13 17:08:18,787 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-09-13 17:08:21,901 INFO o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2024-09-13 17:08:21,903 INFO o.s.w.s.FrameworkServlet [main] Initializing Servlet ''
+2024-09-13 17:08:21,908 INFO o.s.w.s.FrameworkServlet [main] Completed initialization in 1 ms
+2024-09-13 17:08:21,956 INFO o.s.b.StartupInfoLogger [main] Started DiagnosticControllerTest in 3.859 seconds (process running for 5.852)
+2024-09-13 17:08:22,169 INFO c.h.f.a.c.DiagnosticController [main] Requête reçue pour diagnostiquer l'index de santé : -1
+2024-09-13 17:08:22,185 ERROR c.h.f.a.e.GlobalExceptionHandler [main] InvalidIndexSanteException: L'index de santé ne peut pas être négatif
+2024-09-13 17:08:22,438 INFO c.h.f.a.c.DiagnosticController [main] Requête reçue pour diagnostiquer l'index de santé : 33
+2024-09-13 17:08:22,440 INFO c.h.f.a.c.DiagnosticController [main] Diagnostic établi avec succès pour l'index de santé : 33
+2024-09-13 17:08:22,479 INFO c.h.f.a.c.DiagnosticController [main] Requête reçue pour diagnostiquer l'index de santé : 0
+2024-09-13 17:08:22,480 INFO c.h.f.a.c.DiagnosticController [main] Diagnostic établi avec succès pour l'index de santé : 0
+2024-09-13 17:08:22,493 INFO c.h.f.a.c.DiagnosticController [main] Requête reçue pour diagnostiquer l'index de santé : 2000
+2024-09-13 17:08:22,494 INFO c.h.f.a.c.DiagnosticController [main] Diagnostic établi avec succès pour l'index de santé : 2000
+2024-09-13 17:08:22,522 INFO c.h.f.a.s.DiagnosticService [main] Début du diagnostic pour l'index de santé : 15
+2024-09-13 17:08:22,523 INFO c.h.f.a.s.DiagnosticService [main] Diagnostic établi : [CARDIOLOGIE, TRAUMATOLOGIE] pour l'index de santé : 15
+2024-09-13 17:08:22,533 INFO c.h.f.a.s.DiagnosticService [main] Début du diagnostic pour l'index de santé : 9
+2024-09-13 17:08:22,534 INFO c.h.f.a.s.DiagnosticService [main] Diagnostic établi : [CARDIOLOGIE] pour l'index de santé : 9
+2024-09-13 17:08:22,542 INFO c.h.f.a.s.DiagnosticService [main] Début du diagnostic pour l'index de santé : 25
+2024-09-13 17:08:22,542 INFO c.h.f.a.s.DiagnosticService [main] Diagnostic établi : [TRAUMATOLOGIE] pour l'index de santé : 25
+2024-09-13 17:08:22,546 INFO c.h.f.a.s.DiagnosticService [main] Début du diagnostic pour l'index de santé : 0
+2024-09-13 17:08:22,565 INFO c.h.f.a.s.DiagnosticService [main] Début du diagnostic pour l'index de santé : -15
+2024-09-13 17:08:22,570 ERROR c.h.f.a.s.DiagnosticService [main] Index de santé invalide : -15
+2024-09-13 17:08:22,580 INFO c.h.f.a.s.DiagnosticService [main] Début du diagnostic pour l'index de santé : 7
+2024-09-13 17:08:22,581 INFO c.h.f.a.s.DiagnosticService [main] Diagnostic établi : [AUCUNE_PATHOLOGIE] pour l'index de santé : 7
