@@ -1,16 +1,19 @@
 package com.hopital.futur.autodiagnostic.service;
 
-import com.hopital.futur.autodiagnostic.response.DiagnosticResponse;
+import com.hopital.futur.autodiagnostic.dto.DiagnosticDetail;
 import com.hopital.futur.autodiagnostic.exception.InvalidIndexSanteException;
-import com.hopital.futur.autodiagnostic.model.DiagnosticType;
+import com.hopital.futur.autodiagnostic.response.DiagnosticResponse;
 import com.hopital.futur.autodiagnostic.rules.CardiologyRule;
 import com.hopital.futur.autodiagnostic.rules.TraumatologyRule;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import java.util.Arrays;
-
-import static org.junit.jupiter.api.Assertions.*;
+import java.util.List;
+import java.util.stream.Collectors;
 
 class DiagnosticServiceTest {
 
@@ -24,54 +27,37 @@ class DiagnosticServiceTest {
         ));
     }
 
-    @Test
-    void testDiagnostiquerMultipleDe3Et5() {
-        DiagnosticResponse response = diagnosticService.diagnostiquer(15);
-        assertEquals(15, response.getIndexSante());
-        assertTrue(response.getDiagnostics().contains(DiagnosticType.CARDIOLOGIE));
-        assertTrue(response.getDiagnostics().contains(DiagnosticType.TRAUMATOLOGIE));
-    }
+    @ParameterizedTest
+    @CsvSource({
+            "15, CARD|TRAUM",
+            "9, CARD",
+            "25, TRAUM",
+            "7, NONE",
+            "0, NONE"
+    })
+    void testDiagnostiquer(int indexSante, String expectedCodesStr) {
+        DiagnosticResponse response = diagnosticService.diagnostiquer(indexSante);
+        Assertions.assertEquals(indexSante, response.getIndexSante());
 
-    @Test
-    void testDiagnostiquerMultipleDe3() {
-        DiagnosticResponse response = diagnosticService.diagnostiquer(9);
-        assertEquals(9, response.getIndexSante());
-        assertTrue(response.getDiagnostics().contains(DiagnosticType.CARDIOLOGIE));
-    }
+        List<String> expectedCodes = Arrays.asList(expectedCodesStr.split("\\|"));
 
-    @Test
-    void testDiagnostiquerMultipleDe5() {
-        DiagnosticResponse response = diagnosticService.diagnostiquer(25);
-        assertEquals(25, response.getIndexSante());
-        assertTrue(response.getDiagnostics().contains(DiagnosticType.TRAUMATOLOGIE));
-    }
+        // Extraire les codes réels de la réponse
+        List<String> actualCodes = response.getDiagnostics().stream()
+                .map(DiagnosticDetail::getCode)
+                .collect(Collectors.toList());
 
-    @Test
-    void testDiagnostiquerAucunePathologie() {
-        DiagnosticResponse response = diagnosticService.diagnostiquer(7);
-        assertEquals(7, response.getIndexSante());
-        assertTrue(response.getDiagnostics().contains(DiagnosticType.AUCUNE_PATHOLOGIE));
-    }
+        Assertions.assertEquals(expectedCodes.size(), actualCodes.size(), "Le nombre de diagnostics ne correspond pas.");
 
-    @Test
-    void testDiagnostiquerZero() {
-        DiagnosticResponse response = diagnosticService.diagnostiquer(0);
-        assertEquals(0, response.getIndexSante());
-        assertTrue(response.getDiagnostics().contains(DiagnosticType.AUCUNE_PATHOLOGIE));
+        for (String expectedCode : expectedCodes) {
+            Assertions.assertTrue(actualCodes.contains(expectedCode),
+                    "Le code de diagnostic attendu n'est pas présent : " + expectedCode);
+        }
     }
 
     @Test
     void testDiagnostiquerNombreNegatif() {
-        assertThrows(InvalidIndexSanteException.class, () -> {
+        Assertions.assertThrows(InvalidIndexSanteException.class, () -> {
             diagnosticService.diagnostiquer(-15);
         });
     }
-
-
-   /* @Test
-    void testDiagnostiquerLargeNombre() {
-        DiagnosticResponse response = diagnosticService.diagnostiquer(1000000);
-        assertEquals(1000000, response.getIndexSante());
-        assertEquals("Aucune pathologie détectée", response.getDiagnostic());
-    }*/
 }

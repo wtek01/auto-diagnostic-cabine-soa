@@ -1,18 +1,30 @@
 package com.hopital.futur.autodiagnostic.model;
 
-import com.fasterxml.jackson.annotation.JsonValue;
-
 public enum DiagnosticType {
-    CARDIOLOGIE("Cardiologie"),
-    TRAUMATOLOGIE("Traumatologie"),
-    AUCUNE_PATHOLOGIE("Aucune pathologie détectée");
+    CARDIOLOGIE("CARD", "Cardiologie"),
+    TRAUMATOLOGIE("TRAUM", "Traumatologie"),
+    AUCUNE_PATHOLOGIE("NONE", "Aucune pathologie détectée");
 
+    private final String code;
     private final String description;
-    DiagnosticType(String description) {
+
+    DiagnosticType(String code, String description) {
+        this.code = code;
         this.description = description;
     }
-    @JsonValue
-    public String getDescription() {
-        return description;
+
+    public String getCode() { return code; }
+
+    public String getDescription() { return description; }
+
+    // Add this method
+    public static DiagnosticType fromCode(String code) {
+        for (DiagnosticType type : DiagnosticType.values()) {
+            if (type.getCode().equals(code)) {
+                return type;
+            }
+        }
+        throw new IllegalArgumentException("No enum constant with code " + code);
     }
 }
+
