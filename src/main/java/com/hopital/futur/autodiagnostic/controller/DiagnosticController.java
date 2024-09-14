@@ -1,5 +1,6 @@
 package com.hopital.futur.autodiagnostic.controller;
 
+import com.hopital.futur.autodiagnostic.documentation.SwaggerDiagnosticOperation;
 import com.hopital.futur.autodiagnostic.response.DiagnosticResponse;
 import com.hopital.futur.autodiagnostic.service.DiagnosticService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -23,14 +24,7 @@ public class DiagnosticController {
         this.diagnosticService = diagnosticService;
     }
 
-    @Operation(summary = "Obtenir un diagnostic basé sur l'index de santé")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Diagnostic réussi",
-                    content = @Content(mediaType = "application/json",
-                            schema = @Schema(implementation = DiagnosticResponse.class))),
-            @ApiResponse(responseCode = "400", description = "Index de santé invalide",
-                    content = @Content)
-    })
+    @SwaggerDiagnosticOperation
     @GetMapping("/diagnostic/{indexSante}")
     public ResponseEntity<DiagnosticResponse> diagnostiquer(@PathVariable int indexSante) {
         log.info("Requête reçue pour diagnostiquer l'index de santé : {}", indexSante);
