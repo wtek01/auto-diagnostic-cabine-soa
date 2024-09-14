@@ -3,6 +3,7 @@ package com.hopital.futur.autodiagnostic.service;
 import com.hopital.futur.autodiagnostic.exception.InvalidIndexSanteException;
 import com.hopital.futur.autodiagnostic.response.DiagnosticResponse;
 import com.hopital.futur.autodiagnostic.model.DiagnosticType;
+import com.hopital.futur.autodiagnostic.rules.DiagnosticRule;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -14,11 +15,10 @@ import java.util.List;
 @Slf4j
 public class DiagnosticService {
     private static final int SEUIL_AVERTISSEMENT = 1000; // Exemple de seuil pour les valeurs inhabituelles
-
-    // Constantes pour les seuils de diagnostic
-    private static final int DIVISEUR_CARDIOLOGIE  = 3;
-    private static final int DIVISEUR_TRAUMATOLOGIE = 5;
-
+    private final List<DiagnosticRule> rules;
+    public DiagnosticService(List<DiagnosticRule> rules) {
+        this.rules = rules;
+    }
     /**
      * Effectue un diagnostic basé sur l'index de santé fourni.
      * L'index de santé est attendu dans la plage [0, ~1000] selon les spécifications du capteur.
@@ -42,12 +42,12 @@ public class DiagnosticService {
 
         List<DiagnosticType> diagnostics = new ArrayList<>();
 
-        if (indexSante % DIVISEUR_CARDIOLOGIE  == 0) {
-            diagnostics.add(DiagnosticType.CARDIOLOGIE);
+        for (DiagnosticRule rule : rules) {
+            if (rule.applies(indexSante)) {
+                diagnostics.add(rule.getDiagnosticType());
+            }
         }
-        if (indexSante % DIVISEUR_TRAUMATOLOGIE  == 0) {
-            diagnostics.add(DiagnosticType.TRAUMATOLOGIE);
-        }
+
         if (diagnostics.isEmpty()) {
             diagnostics.add(DiagnosticType.AUCUNE_PATHOLOGIE);
         }
